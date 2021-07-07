@@ -144,7 +144,7 @@ def test(is_testing=True, epoch=0):
     if is_testing:
         print("Loading Weights from chengdu checkpoints...")
         dataset = dataloader.test_datasets[0]
-        checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir + "_chengdu"))
+        checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir + "_same"))
         print("Loading Chengdu Finished.")
     else:
         dataset = dataloader.val_datasets[0]
@@ -192,7 +192,7 @@ def test(is_testing=True, epoch=0):
     if is_testing:
         print("Loading Weights from porto checkpoints...")
         dataset = dataloader.test_datasets[1]
-        checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir + "_porto"))
+        checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir + "_same"))
         print("Loading Chengdu Finished.")
     else:
         dataset = dataloader.val_datasets[1]
