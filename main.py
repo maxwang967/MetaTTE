@@ -272,12 +272,10 @@ if __name__ == '__main__':
     mape_metrics = tf.keras.metrics.Mean()
     rmse_metrics = tf.keras.metrics.Mean()
     checkpoint_dir = f'./checkpoints_{my_config.general_config["prefix"]}'
-    if not os.path.exists(checkpoint_dir + "_chengdu"):
-        os.mkdir(checkpoint_dir + "_chengdu")
-    if not os.path.exists(checkpoint_dir + "_porto"):
-        os.mkdir(checkpoint_dir + "_porto")
-    checkpoint_prefix_chengdu = os.path.join(checkpoint_dir + "_chengdu", my_config.general_config["prefix"])
-    checkpoint_prefix_porto = os.path.join(checkpoint_dir + "_porto", my_config.general_config["prefix"])
+    if not os.path.exists(checkpoint_dir + "_same"):
+        os.mkdir(checkpoint_dir + "_same")
+    checkpoint_prefix_chengdu = os.path.join(checkpoint_dir + "_same", my_config.general_config["prefix"])
+    checkpoint_prefix_porto = os.path.join(checkpoint_dir + "_same", my_config.general_config["prefix"])
     checkpoint = tf.train.Checkpoint(optimizer=optimizer,
                                      model=our_model)
     current_time = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
