@@ -87,4 +87,4 @@ python main.py --config=./experiments/finetuning/64/gru.conf
 ```
 ## Citation
 
-We currently do not provide citations.
+@ARTICLE{9700746,  author={Wang, Chenxing and Zhao, Fang and Zhang, Haichao and Luo, Haiyong and Qin, Yanjun and Fang, Yuchen},  journal={IEEE Transactions on Intelligent Transportation Systems},   title={Fine-Grained Trajectory-Based Travel Time Estimation for Multi-City Scenarios Based on Deep Meta-Learning},   year={2022},  volume={},  number={},  pages={1-13},  doi={10.1109/TITS.2022.3145382}}
